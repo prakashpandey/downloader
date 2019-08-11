@@ -122,6 +122,7 @@ func main() {
 		fmt.Printf("Error reading url: %s", err)
 		return
 	}
+	url = strings.TrimSpace(url)
 	fileLen, fileType, err := getFileInfo(url)
 	if err != nil {
 		fmt.Printf("Error getting file information: %s\n", err)
