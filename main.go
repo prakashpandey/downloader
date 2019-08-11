@@ -97,8 +97,6 @@ func write(fileName string, content []byte) error {
 }
 
 func getFileInfo(url string) (int64, string, error) {
-	qParam := "mime=true"
-	url = fmt.Sprintf("%s?%s", url, qParam)
 	resp, err := http.Head(url)
 	if err != nil {
 		return 0, "", err
